@@ -4,44 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>我愛健身網站</title>
+    <link rel="stylesheet" href="./css/style.css">
 
     <style>
-        body {
-            background-color: rgb(47, 13, 172);
-            color: rgb(0, 0, 0);
-            font-family: 標楷體;
-            text-align: center
-        }
-
-        .sub-title {
-            background-color: #e6e6fa;
-            color: #146C94;
-            /* 1rem=16px */
-            font-size: 1.5rem;
-            text-align: left;
-            margin: 12px;
-            padding: 6px;
-        }
-
-        .title {
-            font-size: 2rem;
-            border-radius: 6px;
-            /* 四個方向 10px 20px 30px 40px */
-            margin: 12px;
-            padding: 16px 12px;
-            text-align: center;
-        }
-
-        span {
-            border-radius: 6px;
-            font-size: 1.5rem;
-        }
-
-        #container {
-            width: 80%;
-            margin: 12px auto;
-        }
-
         img {
             background-color: #e6e6fa;
             padding: 6px;
@@ -78,6 +43,7 @@
         table {
             width: 80%;
             margin: 0px auto;
+            height: 250px;
         }
 
         th {
@@ -89,6 +55,58 @@
         td {
             color: aquamarine;
             background-color: cadetblue;
+            width: 100px;
+        }
+
+        td:first-child {
+            background-color: #181820;
+        }
+
+        /* 奇數行 */
+        td:nth-child(odd) {
+            background-color: #181820;
+        }
+
+        /* 偶數行 */
+        td:nth-child(even) {
+            background-color: #171786;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            background-color: tomato;
+            padding: 1.5rem;
+            border-radius: 6px;
+            color: darkblue;
+        }
+
+        /* 同時設定四個標籤 */
+        input,
+        textarea,
+        label,
+        button {
+            font-size: 24px;
+            margin: 6px;
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            width: 80%;
+        }
+
+        button {
+            width: 100px;
+            background-color: lawngreen;
+            border: 0px;
+            border-radius: 6px;
+            padding: 6px 0;
+        }
+
+        button[type="reset"] {
+            background-color: red;
+            color: white;
         }
     </style>
 
@@ -97,7 +115,7 @@
 <body>
     <div id="container">
         <!-- 註解區 -->
-        <div class="sub-title title">&spades;&nbsp;何謂健身?</div>
+        <div class="sub-title">&spades;&nbsp;何謂健身?</div>
         <div style="background-color: tomato; color:white;
     font-family: 微軟正黑體; ">
             <h3>
@@ -183,7 +201,7 @@
                     <th>體重正常者所需熱量</th>
                     <th> 體重過重、肥胖者所需熱量</th>
                 </tr>
-            </thead>s
+            </thead>
             <tbody>
                 <tr>
                     <td>輕度工作</td>
@@ -220,11 +238,12 @@
 </body>
 <hr>
 <div class="sub-title">影片介紹</div>
-<iframe width="600" height="400" src="https://www.youtube.com/embed/MzLZXUnekuI"
+<br>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/MzLZXUnekuI"
     title="健身房新手【4天練全身課表】每天只做CP值最高的三個精華動作！│健人訓練│ 2021ep31" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>
-<iframe width="600" height="400" src="https://www.youtube.com/embed/Vb287LMSwlw"
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vb287LMSwlw"
     title="30分鐘爆汗燃脂+核心訓練│無須器材、無跳躍、不傷手腕│跟著我甩掉多餘體脂肪！30 Min Athome fat burn, no equipment needed, no jumping"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -239,9 +258,10 @@
     <br>
     <label for="command">意見</label>
     <br>
-    <textarea id="command" name="command" cols="25"></textarea>
+    <textarea id="command" name="command" cols="25" rows="20"></textarea>
     <p>
         <button type="submit">提交</button>
+        <button type="reset">清除</button>
     </p>
 </form>
 </div>
